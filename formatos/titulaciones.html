@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>TITULACIONES </title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <script type="text/javascript">
+        function upperCase() {
+            var x = document.getElementById("fname").value
+            document.getElementById("fname").value = x.toUpperCase()
+        }
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="jspdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <script src="Resultado/Titulos.php"></script>
+
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <a href="../index2.php" class="logo d-flex align-items-center">
+                <img src="../assets/img/logo_ideal.png" alt="">
+                <span class="d-none d-lg-block">UCAP</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div>
+        <!-- End Logo -->
+
+        <div class="search-bar">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <input type="text" name="query" placeholder="Buscar" title="Enter search keyword">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            </form>
+        </div>
+        <!-- End Search Bar -->
+
+        <nav class="header-nav ms-auto">
+            <ul class="d-flex align-items-center">
+
+                <li class="nav-item d-block d-lg-none">
+                    <a class="nav-link nav-icon search-bar-toggle " href="#">
+                        <i class="bi bi-search"></i>
+                    </a>
+                </li>
+                <!-- End Search Icon-->
+
+
+                <li class="nav-item dropdown pe-3">
+
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <img src="../assets/img/logo_ideal.png" alt="Profile" class="rounded-circle">
+                        <span class="d-none d-md-block dropdown-toggle ps-2">K. Martinez</span>
+                    </a>
+                    <!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h6>Karla Martinez</h6>
+                            <span>Desarrollador Web</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="">
+                                <i class="bi bi-person"></i>
+                                <span>Mi cuenta</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="">
+                                <i class="bi bi-gear"></i>
+                                <span>Configuración</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="">
+                                <i class="bi bi-question-circle"></i>
+                                <span>Necesitas ayuda ?</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <i class="bi bi-box-arrow-right"></i>
+                                <span>Cerrar Sesión</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!-- End Profile Dropdown Items -->
+                </li>
+                <!-- End Profile Nav -->
+
+            </ul>
+        </nav>
+        <!-- End Icons Navigation -->
+
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link " href="index2.php">
+                    <i class="bi bi-grid"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <!-- End Dashboard Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                    <i class=" bi bi-person"></i><span>ALUMNOS</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="registroAlu.php">
+                            <i class="bi bi-circle"></i><span>Registrar Alumno</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Carta Pasante</span>
+                        </a>
+                        <ul>
+                            <li><a href="derechoCP.html">Carta Pasante Derecho</a></li>
+                            <li><a href="psicologiaCP.html">Carta Pasante Psicologia</a></li>
+                            <li><a href="contaduriaCP.html">Carta Pasante Contaduria</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Carta de Terminación</span>
+                        </a>
+                        <ul>
+                            <li><a href="derechoCT.html">Carta Terminación Derecho</a></li>
+                            <li><a href="psicologiaCT.html">Carta Terminación Psicologia</a></li>
+                            <li><a href="contaduriaCT.html">Carta Terminación Contaduria</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>MACHOTE</span>
+                        </a>
+                        <ul>
+                            <li><a href="machote.html">Machote Derecho</a></li>
+                            <li><a href="psicologiaM.html">Machote Psicologia</a></li>
+                            <li><a href="contaduriaM.html">Machote Contaduria</a></li>
+                            <li><a href="maestriaDM.html">Machote Maestria en Derecho</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>CARDEX</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="titulaciones.html">
+                            <i class="bi bi-circle"></i><span>TÍTULOS</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- End Components Nav -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="">
+                    <i class="bi bi-menu-button-wide"></i>
+                    <span>FORMATOS</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-journal-text"></i><span>MEDIA SUPERIOR</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Bachillerato</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Examen Único</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- End Forms Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-layout-text-window-reverse"></i><span>  SUPERIOR</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Licenciatura</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- End Tables Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-bar-chart"></i><span>POSGRADO</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Maestria</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Doctorado</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+            <!-- End Charts Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-gem"></i><span>TITULACIÓN</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Registrar Directa</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Base Escolarizado</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <!-- End Icons Nav -->
+
+            <li class="nav-heading">GENERAL</li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="">
+                    <i class="bi bi-person"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <!-- End Profile Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="">
+                    <i class="bi bi-question-circle"></i>
+                    <span>Consultas</span>
+                </a>
+            </li>
+            <!-- End F.A.Q Page Nav -->
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Cerrar Sesión</span>
+                </a>
+            </li>
+        </ul>
+
+    </aside>
+    <!-- End Sidebar-->
+
+    <!-- Header Top END ==== -->
+
+    <main id="main" class="main">
+
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h3>CARTA TERMINACIÓN DERECHO</h3>
+                    <hr>
+                    <form id="form" action="Resultado/Titulos.php" method="post">
+
+                        <div class="mb-3">
+                            <label for="apellidos" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Noe González Fruits">
+                        </div>
+                        <div class="mb-3">
+                            <label for="carrera" class="form-label">Titulo</label>
+                            <select class="form-select" id="carrera" name="carrera">
+                                <option value="">Seleccione</option>
+                                <option value="Licenciado en Derecho">Licenciado en Derecho</option>
+                                <option value="Licenciada en Derecho">Licenciada en Derecho</option>
+                                <option value="Licenciado en Psicología">Licenciado en Psicología
+                                </option>
+                                <option value="Licenciada en Psicología">Licenciada en Psicología
+                                </option>
+                                <option value="Licenciado en Contaduria Pública">Licenciado en Contaduría Pública
+                                </option>
+                                <option value="Licenciada en Contaduria Pública">Licenciada en Contaduría Pública
+                                </option>
+                                <option value="Maestro en Derecho Civil">Maestro en Derecho Civil
+                                </option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha" class="form-label">Se expide el día:</label>
+                            <input type="text" class="form-control" id="fecha" name="fecha" placeholder=" el día veintisiete de febrero de dos mil veintidos,">
+                        </div>
+
+
+                        <input type="submit" value="GENERAR TITULO" name="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- End #main -->
+
+    <!-- Footer Top ==== -->
+    <!-- ======= Footer ======= -->
+    <footer id="footer" class="footer" style="background: linear-gradient(90deg, #641E16,  #a88218);">
+        <div class="copyright" style="color: aliceblue;">
+            &copy; Copyright <strong><span>INSTITUTO UCAP</span></strong> <i>"Fomentamos tu Porvenir"</i>
+        </div>
+
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/chart.js/chart.min.js"></script>
+    <script src="../assets/vendor/echarts/echarts.min.js"></script>
+    <script src="../assets/vendor/quill/quill.min.js"></script>
+    <script src="../assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="../assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../assets/js/main.js"></script>
+    <!-- Footer END ==== -->
+
+</body>
+
+</html>

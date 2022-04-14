@@ -25,19 +25,18 @@ window.addEventListener('load', async() => {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        let nombres = document.getElementById('nombres').value;
         let apellidos = document.getElementById('apellidos').value;
         let revoe = document.getElementById('revoe').value;
         let fecha = document.getElementById('fecha').value;
 
 
-        generatePDF(nombres, apellidos, revoe, fecha);
+        generatePDF(apellidos, revoe, fecha);
 
     })
 
 });
 
-async function generatePDF(nombres, apellidos, revoe, fecha) {
+async function generatePDF(apellidos, revoe, fecha) {
     const image = await loadImage("cartaTerDer.jpg");
 
 
@@ -47,12 +46,13 @@ async function generatePDF(nombres, apellidos, revoe, fecha) {
     pdf.addImage(image, 'PNG', 0, 0, 600, 800);
 
     pdf.setFontSize(11);
+    pdf.setFontType("bold");
     pdf.text(apellidos, 164, 465);
-    pdf.text(nombres, 261, 465);;
     pdf.text(revoe, 335, 376);
+    pdf.setFont("times");
     pdf.text(fecha, 386, 252);
 
 
-    pdf.save(apellidos + " " + nombres + " CARTA TERMINACIÓN CONTADURIA.pdf");
+    pdf.save(apellidos + " CARTA TERMINACIÓN CONTADURIA.pdf");
 
 }

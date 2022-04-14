@@ -24,7 +24,7 @@
                     <div style="background-color: white;  flex: 1; ">
                         <div class="card-body">
                             <div class="brand-wrapper" style="margin-left: 20%;">
-                                <img src="../ADMIN UCAP/login/images/logo.svg" alt="logo" class="logo">
+                                <img src="assets/img/logo_ideal.png" alt="logo" class="logo">
                                 <p class="login-card-description">Ingresa Usuario y Contraseña</p>
                                 <form id="formLogin" class="contact-bx" action="" method="post">
                                     <div class="form-group">

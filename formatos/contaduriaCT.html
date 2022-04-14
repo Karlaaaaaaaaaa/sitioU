@@ -50,7 +50,7 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="../index2.php" class="logo d-flex align-items-center">
-                <img src="../login/images/logo.svg" alt="">
+                <img src="../assets/img/logo_ideal.png" alt="">
                 <span class="d-none d-lg-block">UCAP</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -79,7 +79,7 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="../assets/img/logo.png" alt="Profile" class="rounded-circle">
+                        <img src="../assets/img/logo_ideal.png" alt="Profile" class="rounded-circle">
                         <span class="d-none d-md-block dropdown-toggle ps-2">K. Martinez</span>
                     </a>
                     <!-- End Profile Iamge Icon -->
@@ -148,7 +148,7 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " href="../index2.php">
+                <a class="nav-link " href="index2.php">
                     <i class="bi bi-grid"></i>
                     <span>Inicio</span>
                 </a>
@@ -169,26 +169,41 @@
                         <a href="">
                             <i class="bi bi-circle"></i><span>Carta Pasante</span>
                         </a>
+                        <ul>
+                            <li><a href="derechoCP.html">Carta Pasante Derecho</a></li>
+                            <li><a href="psicologiaCP.html">Carta Pasante Psicologia</a></li>
+                            <li><a href="contaduriaCP.html">Carta Pasante Contaduria</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="">
                             <i class="bi bi-circle"></i><span>Carta de Terminación</span>
                         </a>
-
+                        <ul>
+                            <li><a href="derechoCT.html">Carta Terminación Derecho</a></li>
+                            <li><a href="psicologiaCT.html">Carta Terminación Psicologia</a></li>
+                            <li><a href="contaduriaCT.html">Carta Terminación Contaduria</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="">
                             <i class="bi bi-circle"></i><span>MACHOTE</span>
                         </a>
                         <ul>
-                            <li><a href="../../ADMIN UCAP/formatos/machote.html">Machote Derecho</a></li>
-                            <li><a href="../../ADMIN UCAP/formatos/psicologiaM.html">Machote Psicologia</a></li>
-                            <li><a href="../../ADMIN UCAP/formatos/contaduriaM.html">Machote Contaduria</a></li>
+                            <li><a href="machote.html">Machote Derecho</a></li>
+                            <li><a href="psicologiaM.html">Machote Psicologia</a></li>
+                            <li><a href="contaduriaM.html">Machote Contaduria</a></li>
+                            <li><a href="maestriaDM.html">Machote Maestria en Derecho</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="">
                             <i class="bi bi-circle"></i><span>CARDEX</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="titulaciones.html">
+                            <i class="bi bi-circle"></i><span>TÍTULOS</span>
                         </a>
                     </li>
                 </ul>
@@ -301,7 +316,6 @@
 
     </aside>
     <!-- End Sidebar-->
-
     <!-- Header Top END ==== -->
 
     <main id="main" class="main">
@@ -314,15 +328,9 @@
                     <hr>
                     <form id="form">
 
-                        <div class="row mb-3">
-                            <div class="col-md-6">
-                                <label for="nombres" class="form-label">Nombre(s)</label>
-                                <input type="text" class="form-control" id="nombres" onblur="upperCase()">
-                            </div>
-                            <div class="col-md-6">
-                                <label for="apellidos" class="form-label">Apellido(s)</label>
-                                <input type="text" class="form-control" id="apellidos" onblur="upperCase()">
-                            </div>
+                        <div class="mb-3">
+                            <label for="apellidos" class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="apellidos" placeholder="SILVA REYES JUAN AGUILAR" onblur="upperCase()">
                         </div>
 
 
@@ -347,8 +355,8 @@
 
     <!-- Footer Top ==== -->
     <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-        <div class="copyright">
+    <footer id="footer" class="footer" style="background: linear-gradient(90deg, #641E16,  #a88218);">
+        <div class="copyright" style="color: aliceblue;">
             &copy; Copyright <strong><span>INSTITUTO UCAP</span></strong> <i>"Fomentamos tu Porvenir"</i>
         </div>
 
